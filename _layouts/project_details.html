@@ -17,17 +17,17 @@
   {% include project_404.html %}
 {% else %}
 
-# {{- project_info.name -}}
-{{- project_info.uid -}}
+<h1> {{ project_info.name }} </h1>
+{{ project_info.uid }}
 {% comment %} start project data {% endcomment %}
 
-## Project Lead
+<h3> Project Lead </h3>
 {% include project_person_role.html query="project lead" %}
 
-## Project Managers
+<h3> Project Managers </h3>
 {% include project_person_role.html query="project manager" %}
 
-## Moderators
+<h3> Moderators </h3>
 {% include project_person_role.html query="moderator" %}
 
 {% endif %}
