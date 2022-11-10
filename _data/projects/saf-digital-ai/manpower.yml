@@ -1,0 +1,16 @@
+personnel:
+  - name: "PHPTF Admin"
+    username: "saf-ph"
+    github_link: "https://github.com/saf-ph"
+    roles:
+      - "project manager"
+      - "moderator"
+
+  - name: "Scott Cheng"
+    username: "scott-cjx"
+    github_link: "https://github.com/scott-cjx"
+    roles:
+      - "project lead"
+      - "project manager"
+      - "programmer"
+      - "moderator"

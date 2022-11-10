@@ -1,0 +1,31 @@
+
+{%- comment -%} gets project information from site.data {%- endcomment -%}
+
+{%- assign project_info = nil -%}
+{%- for project_folds in site.data.projects -%}
+  {%- assign project_fold = project_folds[1] -%}
+  {%- if project_fold.project_info.uid == page.project_uid -%}
+    {%- assign project_info = project_fold -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%} sends user to project 404 if project data not found {%- endcomment -%}
+{%- if project_info == nil -%}
+  {%- includes project_404.html -%}
+{%- else -%}
+
+# {{- project_info.name -}}
+{{- project_info.uid -}}
+{%- comment -%} start project data {%- endcomment -%}
+
+## Project Lead
+{%- include project_person_role.html query="project lead" -%}
+
+## Project Managers
+{%- include project_person_role.html query="project manager" -%}
+
+## Moderators
+{%- include project_person_role.html query="moderator" -%}
+
+{%- endif -%}
