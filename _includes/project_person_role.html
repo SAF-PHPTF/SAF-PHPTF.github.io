@@ -1,5 +1,4 @@
 {%- unless query == falsy -%}
-{%- person_found = 0-%}
 {%- for person in project_info.manpower.personnel -%}
   {% for role in person.roles %}
     {% if role == query %}
