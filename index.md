@@ -3,4 +3,3 @@ permalink: "/"
 ---
 
 # Internal Page
-
