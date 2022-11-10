@@ -12,7 +12,7 @@
 
 {%- comment -%} sends user to project 404 if project data not found {%- endcomment -%}
 {%- if project_info == nil -%}
-  {%- includes project_404.html -%}
+  {%- include project_404.html -%}
 {%- else -%}
 
 # {{- project_info.name -}}
